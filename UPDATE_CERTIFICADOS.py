@@ -12,6 +12,7 @@ def UploadExcel(archivonombre,tabla):
     excel_df=excel_df.set_index('ID')
     excel_df.to_sql(tabla,conn,if_exists="replace",index=True, index_label='ID',)
     query="ALTER TABLE `{table}` ADD PRIMARY KEY (`ID`);".format(table=tabla)
+    query2="ALTER TABLE `{table}`CHANGE COLUMN `ID` `ID` BIGINT(20) NOT NULL AUTO_INCREMENT FIRST;".format(table=tabla)
     conn.execute(query)
 
 def GetExcel(urldoc,ubicación):
