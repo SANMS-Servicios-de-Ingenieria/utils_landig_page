@@ -1,22 +1,12 @@
 @echo off
-setlocal
+echo "-------------------------------"
+echo "Inicio de ejecución de Script de Actualización con Google Sheet"
+echo "-------------------------------"
+echo "Cargando......."
 
-set BASEDIR=%~dp0
+ python UPDATE_CERTIFICADOS.py
 
-cd %BASEDIR%
 
-echo "-----------------------------------------------------"
-echo "Starting Bonita Tomcat bundle"
-echo "-----------------------------------------------------"
-call python UPDATE_CERTIFICADOS.py
-
-echo "-----------------------------------------------------"
-echo "Starting Bonita Tomcat bundle"
-echo "-----------------------------------------------------"
-
-exit /b 0
-
-:exit
-:: pause to let the user read the error message:
-pause
-exit /b 1
+echo "-------------------------------"
+echo "Fin de ejecución de Script"
+echo "-------------------------------"
