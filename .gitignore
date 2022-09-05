@@ -1,0 +1,10 @@
+# Ignora archivos del sistema Mac 
+.DS_store
+
+# Ignora todos los archivos de texto
+utils/*.xlsx
+
+# Ignora los archivos relacionados a API keys
+.env
+
+SCRIPT_PRUEBA.py
