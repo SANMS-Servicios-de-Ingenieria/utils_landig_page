@@ -4,7 +4,7 @@ echo "Inicio de ejecución de Script de Actualización con Google Sheet"
 echo "-------------------------------"
 echo "Cargando......."
 
- python SCRIPT_PRUEBA.py
+ python UPDATE_CERTIFICADOS.py
 
 
 echo "-------------------------------"
